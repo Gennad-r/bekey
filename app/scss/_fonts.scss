@@ -1,0 +1,5 @@
+@import "_mixins/font-face";
+@import "../libs/font-awesome-4.7.0/scss/font-awesome.scss";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);

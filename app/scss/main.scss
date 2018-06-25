@@ -1,0 +1,116 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+html {
+	font-size: 16px;
+	min-height: 100vh;
+}
+body {
+	min-height: 100vh;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+	padding-bottom: 70px;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.jumbotron{
+	background: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url('https://picsum.photos/1920/600/?image=1049');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+
+.card{
+	overflow: hidden;
+	&>a{
+		color: inherit;
+		.card-img-top{
+			transition: 0.3s;
+			transform-origin: center bottom;
+		}
+		&:hover{
+			text-decoration: none;
+			.card-img-top{
+				transform: scale(1.05);
+				opacity: 0.8
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #eee;
+	padding: 1rem 0;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	.textwidget{
+		display: inline;
+	}
+	a {
+		color: #777;
+		transition: color 0.5s;
+		&:visited, &:hover{
+			color: #777;
+		}
+		&:hover {
+			text-decoration: none;
+			color: #555;
+		}
+		.fa{
+			font-size: 1.8rem;
+		}
+
+	}
+}
+
+
+@import "media"; // Always at the end
