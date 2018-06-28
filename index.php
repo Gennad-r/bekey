@@ -21,7 +21,7 @@ get_header();
 		<?php if (  $wp_query->max_num_pages > 1 ) : ?>
 			<div class="row">
 				<div class="col-12 text-center mb-5">
-					<button id="load-more" type="button" class="btn btn-dark">Load more...</button>
+					<a href="#" id="load-more" class="read-more">Load more...</a>
 				</div>
 			</div>
 		<?php endif ?>
