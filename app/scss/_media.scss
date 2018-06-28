@@ -20,14 +20,7 @@
 
 // ≥576px
 @include media-breakpoint-down(xs) {
-	.navbar-collapse{
-		margin-top: 1rem;
-		.nav-item{
-			padding-left: .5rem;
-		}
-	}
 }
-
 
 /*==========  Mobile First  ==========*/
 

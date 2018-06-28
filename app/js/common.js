@@ -1,13 +1,12 @@
 $(function() {
 
-var postPerPage = 4;
+var postPerPage = JSON.parse(bekey_main_params.posts).posts_per_page;
 	function scrollToNewPosts(n) {
-		var postTarget = '.post-item:nth-child(' + (parseInt(n) + 1) + ')';
+		var postTarget = '.card:nth-child(' + (parseInt(n) + 1) + ')';
 		$('html, body').animate({
 			scrollTop: $(postTarget).offset().top
 		}, 1000);
 	}
-
 
 
 	$('#load-more').click(function(){
@@ -25,10 +24,10 @@ var postPerPage = 4;
 				button.text('Loading...');
 			},
 			success : function( data ){
-				var num = $('.post-item').length
+				var num = $('.card').length
 				if( data ) { 
 					button.text( 'Load more...' );
-					$('.post-item').last().after(data);
+					$('.card').last().after(data);
 					scrollToNewPosts(num);
 					bekey_main_params.current_page++;
 					if ( bekey_main_params.current_page == bekey_main_params.max_page ) 

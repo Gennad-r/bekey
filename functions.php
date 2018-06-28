@@ -3,7 +3,7 @@
 require_once 'class-wp-bootstrap-navwalker.php';
 if ( ! function_exists( 'bekey_setup' ) ) :
 		function custom_excerpt_length( $length ) {
-		return 10;
+		return 25;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -12,7 +12,7 @@ if ( ! function_exists( 'bekey_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		add_theme_support( 'post-thumbnails' );
-			set_post_thumbnail_size( 300, 250, true );
+			set_post_thumbnail_size( 370, 999999 );
 
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'bekey' ),
@@ -35,8 +35,26 @@ function bekey_widgets_init() {
 		'after_title'   => '',
 	) );
 	register_sidebar( array(
-		'name'          => 'GitHub',
-		'id'            => 'sidebar-gh',
+		'name'          => 'Twitter',
+		'id'            => 'sidebar-tw',
+		'description'   => 'Add widgets here.',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	register_sidebar( array(
+		'name'          => 'Google +',
+		'id'            => 'sidebar-gp',
+		'description'   => 'Add widgets here.',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	register_sidebar( array(
+		'name'          => 'Pinterest',
+		'id'            => 'sidebar-pin',
 		'description'   => 'Add widgets here.',
 		'before_widget' => '',
 		'after_widget'  => '',
