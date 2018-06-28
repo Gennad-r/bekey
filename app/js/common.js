@@ -9,7 +9,8 @@ var postPerPage = JSON.parse(bekey_main_params.posts).posts_per_page;
 	}
 
 
-	$('#load-more').click(function(){
+	$('#load-more').click(function(e){
+		e.preventDefault();
 		var button = $(this),
 		    data = {
 			'action': 'loadmore',
