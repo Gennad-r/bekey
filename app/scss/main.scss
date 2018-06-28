@@ -214,7 +214,16 @@ header{
 		}
 	}
 }
-
+a.read-more{
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	color: $hovc;
+	font-family: $add-font;
+	border: 3px solid $hovc;
+	padding: 15px 32px;
+	font-size: 1.3rem;
+}
 .post-img-holder{
 	overflow: hidden;
 	position: relative;
@@ -252,16 +261,7 @@ header{
 		background-color: rgba(#000, .7);
 		opacity: 0;
 		transition: opacity 1s ease-out;
-		.read-more{
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-block;
-			color: $hovc;
-			font-family: $add-font;
-			border: 3px solid $hovc;
-			padding: 15px 32px;
-			font-size: 1.3rem;
-		}
+		
 	}
 	&:hover{
 		.readmore-holder{
