@@ -76,10 +76,10 @@ header{
 }
 .top-menu{
 	font-family: $add-font;
-	flex-direction: column;
+	flex-direction: row;
 	color: #fff;
-	font-size: 1.2rem;
-	line-height: 1.2rem;
+	font-size: 0.85rem;
+	line-height: 0.85rem;
 	text-transform: uppercase;
 	.brand-side{
 		margin-top: 20px;
@@ -99,7 +99,7 @@ header{
 		}
 	}
 	.menu-side{
-		margin-left: 0;
+		margin-left: auto;
 		ul{
 			list-style: none;
 			padding: 0;
@@ -126,13 +126,11 @@ header{
 					z-index: 99;
 					background-color: #fff;
 					top: 100%;
-					right: auto;
-					left: 0;
+					right: 0;
+					left: auto;
 					min-width: 100%;
 					box-shadow: 0 0 10px rgba(#000, 0.5);
 					padding: 0 10px;
-					li{
-					}
 					li:not(:last-child) a{
 						border-bottom: 1px solid #cccd;
 					}
@@ -165,6 +163,7 @@ header{
 							}
 							&.google-plus{
 								background-color: #d14836;
+								font-family: $default-font;
 							}
 							&-pinterest-p{
 								background-color: #cb2027;
