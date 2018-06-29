@@ -31,7 +31,22 @@
 
 // ≤768px
 @include media-breakpoint-up(md) {
-
+	.top-menu{
+		flex-direction: row;
+		font-size: 0.85rem;
+		line-height: 0.85rem;
+		.menu-side{
+			margin-left: auto;
+			.top-menu-holder{
+				.share{
+					&>ul{
+						left: auto;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 // ≤992px

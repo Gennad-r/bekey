@@ -33,7 +33,7 @@
 			<div class="brand-side col-auto">
 				<a href="<?php echo get_home_url(); ?>"><img src=" <?php echo get_template_directory_uri() . '/app/img/logo.svg' ?>" alt="" class="logo"> <span>feature</span></a>
 			</div>
-			<div class="menu-side col-auto ml-auto">
+			<div class="menu-side col-auto">
 				<ul class="top-menu-holder">
 					<li class="share">share
 						<ul>
